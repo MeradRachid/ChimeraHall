@@ -1,0 +1,756 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    /* border: 1px solid floralwhite; */
+}
+
+@font-face {
+    font-family: 'Beleren';
+    src: url('../font/Beleren/Beleren2016-Bold.ttf');
+    /* Autres formats de police peuvent être spécifiés ici */
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../font/Cinzel/CinzelDecorative_regular.ttf');
+}
+
+body {
+    /* background-color: #16093A; */
+    background-image: url("../img/moon_Goddess.png");
+    /* Couleur de fond semi-transparente */
+    background-color: rgba(72, 61, 139, 0.7);
+    /* background-size: cover; */
+    /* font-family: 'Beleren2016-Bold.ttf', 'Balthazar', 'Cinzel Decorative'; */
+    /* font-size: large; */
+}
+
+.bg-image {
+    background-size: auto;
+    /* background-color: rgb(72, 61, 139); */
+}
+
+#BodyWrap {
+    margin: auto;
+    width: 95%;
+    padding: 1em;
+    /* border: 3px solid #bb5859; */
+}
+
+header {
+    /* display: flex; */
+    margin-bottom: 4em;
+}
+
+nav {
+    border-radius: 9px;
+    display: flex;
+    padding: 1%;
+    background: #1E1803;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 3px solid crimson; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.dropdown-menu {
+    background-color: #E2BD39;
+}
+
+/* Centre le texte des dropdown items */
+.dropdown-menu.text-left a.dropdown-item {
+    text-align: left !important;
+}
+
+/* Change the hover background color */
+.dropdown-menu.text-left a.dropdown-item:hover {
+    background-color: yellow;
+}
+
+#logo {
+    width: 30%;
+    border-radius: 12%;
+}
+
+a {
+    text-decoration: none;
+    color: gold;
+}
+
+li>a {
+    color: black;
+}
+
+#brand a:first-of-type {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: flex-start;
+}
+
+#Navbar {
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 0px 0 9px;
+    width: 100%;
+    display: flex;
+    /* flex-grow: 1em; */
+    overflow: hidden;
+
+    /* border: 3px solid limegreen; */
+}
+
+#Navbar a {
+    /* float:center; */
+    text-align: center;
+    text-decoration: none;
+
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+
+.no-bullet {
+    list-style-type: none;
+}
+
+button {
+    width: auto !important;
+    height: 4em;
+    padding: 0.1em;
+    border-radius: 25px;
+    background-color: #E2BD39;
+    cursor: pointer;
+    min-width: 10em;
+    /* box-shadow: #16093A; */
+    /* border: 2px solid #16093A;  */
+
+}
+
+.winx {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    /* Mettre le bouton au-dessus de l'effet */
+}
+
+.winx::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, yellow, transparent);
+    animation: shimmer 7s linear infinite;
+    animation-delay: 2s;
+    /* Ajouter un délai de 's' secondes entre chaque itération */
+    z-index: -1;
+    /* Placer l'effet en dessous du bouton */
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+#Home {
+    align-self: center !important;
+}
+
+#Register {
+    width: 230px;
+    height: 90px;
+    /* border-radius: 8em; */
+    text-decoration: none;
+}
+
+#Login {
+    width: 230px;
+    height: 90px;
+    /* border-radius: 8em; */
+    text-decoration: none;
+    align-self: center !important;
+}
+
+h1 {
+    color: goldenrod;
+    text-align: center;
+    font-size: x-large;
+    margin: 1em;
+}
+
+h2 {
+    color: goldenrod;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 1em;
+    line-height: 1.4;
+}
+
+h5 {
+    color: aliceblue;
+}
+
+.highlight {
+    background: rgba(72, 61, 139, 0.5);
+}
+
+/* label {
+    color: aliceblue;
+} */
+
+#labelEvent {
+    display: block;
+    margin-bottom: 30px;
+}
+
+#labelRally {
+    display: block;
+    margin-bottom: 30px;
+}
+
+#labelUser {
+    display: block;
+    margin-bottom: 30px;
+}
+
+p {
+    font-family: Georgia, Verdana, Tahoma, sans-serif;
+    /* background: #1E1803; */
+    color: aliceblue;
+    text-align: center;
+    letter-spacing: normal;
+    line-height: 2;
+    /* Hauteur de ligne de 2 fois la taille de la police */
+    margin: 1em;
+}
+
+i {
+    padding: 0.25em;
+    margin: 0.25em;
+}
+
+em {
+    text-align: center;
+    padding: 0.2em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* On Définit une position relative pour positionner 
+        la barre absolument par rapport à ce conteneur */
+    position: relative;
+    /* border: 3px solid #bb5859; */
+}
+
+section {
+    color: aliceblue !important;
+    margin: 4em 0em;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    background: rgba(72, 61, 139, 0.7);
+    border-radius: 1%;
+    /* border: 5px solid cyan; */
+}
+
+#explore {
+    display: flex;
+    justify-content: center;
+    /* border: 5px solid red; */
+}
+
+legend
+{
+    text-align: left !important;
+}
+
+.SearchBar {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: flex-start; */
+    width: 1031px;
+    height: 84px;
+    position: relative;
+    /* background: rgba(109, 88, 12, 0.7); */
+    border-radius: 50px;
+    margin: 4em;
+    padding: 0.5em;
+    align-content: stretch;
+}
+
+.Search {
+    text-align: left;
+    color: #fff;
+    /* opacity: 0.7; */
+    width: 270px;
+    height: 79px;
+    position: absolute;
+    right: 1em;
+    background: rgba(11, 9, 54, 0.52);
+    border-radius: 50px;
+    padding-left: 10px;
+}
+
+#Search2 {
+    text-align: left;
+    color: #fff;
+    width: 282px;
+    height: 81px;
+    background: rgba(11, 9, 54, 0.52);
+    border-radius: 0% 0%;
+    padding-left: 10px;
+}
+
+#Search3 {
+    text-align: left;
+    color: #fff;
+    width: 282px;
+    height: 81px;
+    background: rgba(11, 9, 54, 0.52);
+    border-radius: 0% 0px 0px 0%;
+    padding-left: 10px;
+}
+
+/* input[type="search"] 
+{
+    padding-left: 10px !important;
+} */
+
+
+
+.SearchButton {
+    background-color: #E2BD39;
+    opacity: 1;
+    height: 80px;
+    border-radius: 45px;
+    position: absolute;
+    /* right: 0; */
+    margin-right: 1em;
+}
+
+#searchResult {
+    text-align: center;
+    color: #E2BD39;
+}
+
+#map {
+    height: 180px;
+}
+
+#spotlight {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    /* border: 5px solid gold;         */
+}
+
+.spotlight {
+    border-radius: 60px;
+
+    text-align: center;
+    color: aliceblue;
+}
+
+figure {
+    /* display: flex; */
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    /* margin: 0 0 -1rem; */
+}
+
+.fa-arrow-up {
+    display: flex;
+    justify-content: right;
+    cursor: pointer;
+    /* padding: 1em 0; */
+}
+
+img {
+    border-radius: 18%;
+}
+
+img[alt^="Last RallyPoint Spotlight"] {
+    scale: 70%;
+}
+
+img[alt^="Last Event Spotlight"] {
+    scale: 70%;
+}
+
+img[alt^="Last Registered Spotlight"] {
+    scale: 70%;
+}
+
+img[alt^="News 1 Spotlight"] {
+    scale: 30%;
+}
+
+img[alt^="MTG Card Randomized"] {
+    scale: 45%;
+    padding: 5em;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+img[alt^="Users List"] {
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+}
+
+#home2 {
+    display: flex;
+    justify-content: center;
+}
+
+#line {
+    padding: 0.5em;
+    text-align: center;
+    border-bottom: 1px solid #E2BD39;
+
+}
+
+#introduction {
+    /* background: #1E1803; */
+    color: aliceblue;
+}
+
+.underline-text {
+    border-bottom: 3px solid #E2BD39;
+}
+
+#status {
+    padding: 0.5em 1em;
+    margin: 1em;
+    text-align: center;
+}
+
+#startHere {
+    text-align: center;
+    font-size: medium;
+    padding: 1% 2% 0 2%;
+    font-family: 'Cinzel', 'Beleren';
+}
+
+#home2 {
+    display: flex;
+    justify-content: center;
+    /* border: 5px solid #E2BD39; */
+}
+
+#home2 h2:first-of-type {
+    text-align: center;
+    color: aliceblue;
+}
+
+#lestat {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: aliceblue;
+    padding-bottom: 2em;
+    /* margin: 2em; */
+    /* border: 5px solid rgb(235, 13, 180); */
+}
+
+.Lestats {
+    border: 5px solid goldenrod;
+    display: flex;
+    margin: 0.5em;
+    padding: 0.5em;
+    background: rgb(30, 24, 3);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home3 {
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    padding: 2em;
+}
+
+.API {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* padding: 2em; */
+    /* border: 3px palegreen solid; */
+}
+
+#fluxRSS {
+    /* display: flex; */
+    flex-direction: column;
+    /* flex: 1; */
+    align-items: center;
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* border: 3px palegreen solid; */
+}
+
+#news {
+    display: flex;
+    width: 570px;
+    flex-direction: column;
+    color: aliceblue;
+}
+
+#spotlightCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 18em;
+    max-height: 18em;
+
+    /* border: 1px salmon solid; */
+}
+
+#focusCard {
+    display: flex;
+    width: 570px;
+    flex-direction: column;
+    color: aliceblue;
+}
+
+.listElements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* #listRallies
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    } */
+
+.event-table {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+table {
+    margin: 1em auto;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    /* border: 1px solid gold; */
+}
+
+th {
+    font-size: x-large;
+    color: aliceblue;
+    border-bottom: 2px solid #E2BD39;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+    border: 1px solid goldenrod;
+}
+
+#td {
+    color: aliceblue !important;
+    border: 1px solid goldenrod !important;
+}
+
+#retroEvent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.line {
+    height: 3px;
+    background-color: gold;
+    position: absolute;
+    top: 45%;
+    width: calc(50% - 16%);
+}
+
+.line:first-of-type {
+    left: 0;
+}
+
+.line:last-of-type {
+    right: 0;
+}
+
+h2+#line {
+    font-size: 24px;
+    padding: 0 20px;
+    background-color: gold;
+    z-index: 1;
+}
+
+/* Positionnement absolu pour pouvoir centrer la barre */
+/* Placer la barre au milieu de son conteneur parent */
+/* Déplacer la barre à gauche */
+/* Déplacer la barre à droite */
+/* La remonter de moitié de sa hauteur pour qu'elle soit centrée verticalement */
+/* Ajouter une bordure en bas pour simuler une barre */
+
+/* #horizontal-bar 
+    {
+        position: absolute; 
+
+        top: 94%; 
+
+        left: 12%; 
+
+        right: 12%; 
+
+        transform: translateY(-50%); 
+
+        border-bottom: 3px solid gold; 
+    } */
+
+/* h2+#horizontal-bar::before
+    {
+
+    }
+    h2+#horizontal-bar::after
+    {
+    } */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid #ff7241; */
+}
+
+.footers {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    background: #1E1803;
+    color: aliceblue;
+    letter-spacing: normal;
+    border: 1px solid goldenrod;
+    /* line-height: 2; Hauteur de ligne de 2 fois la taille de la police */
+}
+
+.footers p:first-of-type {
+    /* padding: 1em; */
+    line-height: 2;
+}
+
+#descriptionSite {
+    width: 36%;
+}
+
+#foot {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#footLinks>a {
+    text-decoration: none;
+    color: gold;
+}
+
+#footLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* #liensUtiles p:first-of-type 
+    {
+        text-align: justify;
+        padding: 0% 0 0 25%;
+        line-height: 2.5;
+    } */
+
+#contact {
+    width: 34%;
+}
+
+#contact p:first-of-type {
+    text-align: center;
+    /* padding: 0% 0 0 12%; */
+}
+
+#liensUtiles {
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#faSNS>a {
+    text-decoration: none;
+    color: gold;
+}
+
+#faSNS {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+/****************************/
+/****************************/
+/****************************/
+/** ---------------------- **/
+/** ----- Responsive ----- **/
+/** ---------------------- **/
+/****************************/
+/****************************/
+/****************************/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {}
+
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}

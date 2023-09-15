@@ -1,0 +1,2 @@
+<?php
+$pageName = "Confidentialité";
